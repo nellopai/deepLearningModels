@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras.layers import Conv2D, MaxPool2D, Input, GlobalAveragePooling2D
+from tensorflow.keras.layers import Conv2D, MaxPool2D, Input, GlobalAveragePooling2D, Dense
 from tensorflow.keras.models import Model
 
 
