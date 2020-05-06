@@ -9,7 +9,8 @@ The **code/** directory contains:
 The implementations are able to manage 2D images (so images in grayscale).
 In particular I got interested into the possibility to reduce the amount of
 parameters keeping the generalization power of the network.
-Indeed the implemented models contains:
+
+A summary of number of parameters for different architectures follows:
 
 Model | Number of Parameters
 ------------ | -------------
