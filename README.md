@@ -1,6 +1,7 @@
 # classificationModels
 This repository includes classification models that I implemented.
-The code/ directory contains:
+
+The *code/* directory contains:
 
 * VGG16 implementation with Global Average Pooling instead of Dense Layers
 * VGG16 with Global Average Pooling and MobileNet like structure
