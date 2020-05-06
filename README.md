@@ -18,5 +18,5 @@ VGG16 with Grayscale input | 165,728,963
 VGG16 with Grayscale input and Global Average Pooling| 14,715,075
 VGG16 with Grayscale input and Global Average Pooling Mobilenet like| 1,414,083
 
-For a reference to the original paper for VGG please refer to the following links:
+For a reference to the original paper for VGG please refer to the following link:
 https://arxiv.org/abs/1409.1556
