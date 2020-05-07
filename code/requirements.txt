@@ -1,0 +1,5 @@
+pandas
+pillow
+tqdm
+opencv-python-headless
+tensorflow=2.1.0
