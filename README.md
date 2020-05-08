@@ -17,6 +17,14 @@ Model | Number of Parameters
 VGG16 with Grayscale input | 165,728,963
 VGG16 with Grayscale input and Global Average Pooling| 14,715,075
 VGG16 with Grayscale input and Global Average Pooling Mobilenet like| 1,414,083
+ResNet18 | 11,172,099
 
+One should notice that ResNet18 has less parameter compared to VGG16 without the Mobilenet improvement and it converges much faster than VGG16.
+
+ 
 For a reference to the original paper for VGG please refer to the following link:
 https://arxiv.org/abs/1409.1556
+
+For a reference to the original paper for VGG please refer to the following link:
+https://arxiv.org/pdf/1512.03385.pdf
+
