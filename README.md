@@ -1,5 +1,5 @@
-# Classification Models Repository
-This repository includes classification models that I implemented.
+# Deep Learning Models Repository
+This repository includes deep learning models that I implemented.
 
 The **code/** directory contains:
 
