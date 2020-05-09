@@ -14,7 +14,7 @@ class ResNet18:
             shortcut = Conv2D(filters, 1, strides=(stride, stride),
                               padding='same')(input_data)
 
-        x = Conv2D(filters, conv_size, activation='none',
+        x = Conv2D(filters, conv_size, activation=None,
                    padding='same', strides=(stride, stride))(input_data)
         x = BatchNormalization()(x)
         x = Activation('relu')(x)
