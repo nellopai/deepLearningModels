@@ -30,6 +30,7 @@ The path to the data points to a directory where only 2 subdirectories are prese
 - validation
 
 In each subdirectories the images are divided per class. The complete structure should be like the following:
+```
 data
 +-- train/
 |   +-- class1/
@@ -41,6 +42,7 @@ data
 |   +-- class2/
 |   +-- class3/
 |   +-- class4/
+```
 
 
 A summary of number of parameters for different architectures follows:
