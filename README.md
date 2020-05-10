@@ -12,7 +12,7 @@ The implementations are able to manage 2D images (so images in grayscale).
 In particular I got interested into the possibility to reduce the amount of
 parameters keeping the generalization power of the network.
 
-# How to train a network
+## How to train a network
 In order to train one of the provided networks please run the following command:
 
 python3 main.py -train -i ../data/ -m resNet50
@@ -45,7 +45,7 @@ data
 |   +-- class4/
 ```
 
-# Networks details
+## Networks details
 
 A summary of number of parameters for different architectures follows:
 
