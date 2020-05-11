@@ -17,7 +17,11 @@ def train(nameModel, imgPath):
     print("Num GPUs Available: ", len(
         tf.config.experimental.list_physical_devices('GPU')))
 
-    IMG_SIZE = 128
+    if (nameModel == 'googleLeNet'):
+        IMG_SIZE = 224
+    else:
+        IMG_SIZE = 128
+
     BATCH_SIZE = 32
 
     # here augmentation could be performed
@@ -42,14 +46,33 @@ def train(nameModel, imgPath):
     print(model.summary())
     print(model.count_params())
 
-    model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.0001),
-                  loss=tf.keras.losses.sparse_categorical_crossentropy,
-                  metrics=["accuracy"])
+    def googleLeNetGenerator(generator):
+        while True:  # keras requires all generators to be infinite
+            data = next(generator)
+            x = data[0]
+            y = data[1], data[1], data[1]
+            yield x, y
+
+    if nameModel != "googleLeNet":
+        model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.0001),
+                      loss=tf.keras.losses.sparse_categorical_crossentropy,
+                      metrics=["accuracy"])
+    else:
+        traindata = googleLeNetGenerator(traindata)
+        validationData = googleLeNetGenerator(validationData)
+        model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.0001),
+                      loss=tf.keras.losses.sparse_categorical_crossentropy,
+                      loss_weights={'main': 1.0, 'aux1': 0.3, 'aux2': 0.3},
+                      metrics=["accuracy"])
 
     pathlib.Path('../artifacts/').mkdir(parents=True, exist_ok=True)
 
-    save_best_model = tf.keras.callbacks.ModelCheckpoint(
-        '../artifacts/best_weights.hdf5', monitor='val_accuracy', verbose=0, save_best_only=True)
+    if nameModel != "googleLeNet":
+        save_best_model = tf.keras.callbacks.ModelCheckpoint(
+            '../artifacts/best_weights.hdf5', monitor='val_accuracy', verbose=0, save_best_only=True)
+    else:
+        save_best_model = tf.keras.callbacks.ModelCheckpoint(
+            '../artifacts/best_weights.hdf5', monitor='val_main_accuracy', verbose=0, save_best_only=True)
 
     with tf.device("/gpu:0"):
         history = model.fit(traindata,

@@ -15,7 +15,7 @@ group.add_argument('-predict', dest='predict', action='store_true')
 parser.add_argument('-i', '--imgPath', type=str, required=True, action='store',
                     help="Relative path of the input images.")
 
-parser.add_argument('-m', '--modelType', choices=['VGG16GlobalAverage', 'vgg16Depthwise', 'resNet18', 'resNet50'], default='vgg16Depthwise', type=str, action='store',
+parser.add_argument('-m', '--modelType', choices=['VGG16GlobalAverage', 'vgg16Depthwise', 'resNet18', 'resNet50', 'googleLeNet'], default='vgg16Depthwise', type=str, action='store',
                     help="Name of the model to use.")
 
 args = parser.parse_args()

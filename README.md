@@ -7,10 +7,21 @@ The **code/** directory contains:
 * VGG16 with Global Average Pooling and MobileNet like structure
 * ResNet 18
 * ResNet 50
+* GoogleLeNet(Inception v1)
 
 The implementations are able to manage 2D images (so images in grayscale).
 In particular I got interested into the possibility to reduce the amount of
 parameters keeping the generalization power of the network.
+
+## Requirement
+First of all please install the requirement with the command:
+pip3 install -r requirements.txt
+The packages required are the following:
+- pandas
+- pillow
+- tqdm
+- opencv-python-headless
+- tensorflow=2.1.0
 
 ## How to train a network
 In order to train one of the provided networks please run the following command:
@@ -57,6 +68,7 @@ VGG16 with Grayscale input and Global Average Pooling MobileNet like| 1,414,083
 ResNet18 | 11,172,099
 ResNet50 with shortcut projection | 38,054,147
 ResNet50 with zero padding | 20,721,155
+GoogleLeNet(Inception v1) | 7,414,969
 
 
 One should notice that ResNet18 has less parameter compared to VGG16 without the MobileNet improvement and it converges much faster than VGG16.
