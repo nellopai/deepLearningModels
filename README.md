@@ -36,6 +36,7 @@ where:
     * vgg16Depthwise
     * resNet18
     * resNet50
+    * googleLeNet
 
 The path to the data points to a directory where only 2 subdirectories are present:
 - train
