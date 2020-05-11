@@ -14,7 +14,7 @@ In particular I got interested into the possibility to reduce the amount of
 parameters keeping the generalization power of the network.
 
 ## Requirement
-First of all please install the requirement with the command:
+Before training any network please install the requirements with the command:
 pip3 install -r requirements.txt
 The packages required are the following:
 - pandas
