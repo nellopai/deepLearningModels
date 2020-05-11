@@ -76,7 +76,7 @@ One should notice that ResNet18 has less parameter compared to VGG16 without the
 
  
 For a reference to the original paper for VGG please refer to the following link:
-https://arxiv.org/abs/1409.1556
+https://arxiv.org/pdf/1409.1556.pdf
 
 For a reference to the original paper for ResNet please refer to the following link:
 https://arxiv.org/pdf/1512.03385.pdf
