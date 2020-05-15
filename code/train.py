@@ -17,7 +17,7 @@ def train(nameModel, imgPath):
     print("Num GPUs Available: ", len(
         tf.config.experimental.list_physical_devices('GPU')))
 
-    if (nameModel == 'googleLeNet'):
+    if (nameModel == 'googleLeNet') or nameModel == 'denseNet':
         IMG_SIZE = 224
     else:
         IMG_SIZE = 128

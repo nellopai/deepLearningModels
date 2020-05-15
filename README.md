@@ -8,6 +8,7 @@ The **code/** directory contains:
 * ResNet 18
 * ResNet 50
 * GoogleLeNet(Inception v1)
+* DenseNet
 
 The implementations are able to manage 2D images (so images in grayscale).
 In particular I got interested into the possibility to reduce the amount of
@@ -37,6 +38,7 @@ where:
     * resNet18
     * resNet50
     * googleLeNet
+    * denseNet
 
 The path to the data points to a directory where only 2 subdirectories are present:
 - train
@@ -70,16 +72,15 @@ ResNet18 | 11,172,099
 ResNet50 with shortcut projection | 38,054,147
 ResNet50 with zero padding | 20,721,155
 GoogleLeNet(Inception v1) | 7,414,969
-
+DenseNet | 3,202,499
 
 One should notice that ResNet18 has less parameter compared to VGG16 without the MobileNet improvement and it converges much faster than VGG16.
 
- 
-For a reference to the original paper for VGG please refer to the following link:
-https://arxiv.org/pdf/1409.1556.pdf
+In the following table one can find reference papers for each architecture:
 
-For a reference to the original paper for ResNet please refer to the following link:
-https://arxiv.org/pdf/1512.03385.pdf
-
-For a reference to the original paper for GoogleLeNet please refer to the following link:
-https://arxiv.org/pdf/1409.4842.pdf
+Name | Reference Papers
+------------ | -------------
+Vgg | https://arxiv.org/pdf/1409.1556.pdf
+ResNet | https://arxiv.org/pdf/1512.03385.pdf
+GoogleLeNet | https://arxiv.org/pdf/1409.4842.pdf
+DenseNet | https://arxiv.org/pdf/1608.06993.pdf

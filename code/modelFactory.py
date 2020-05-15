@@ -19,6 +19,7 @@ class ModelFactory(object):
             return ResNet50(useZeroPadding=True)
         if type == "googleLeNet":
             return GoogleLeNet(num_classes=3)
-
+        if type == "denseNet":
+            return DenseNet()
         assert 0, "Bad model type creation: " + type
     factory = staticmethod(factory)
