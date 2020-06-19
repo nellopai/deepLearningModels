@@ -10,7 +10,6 @@ class ResNet18:
         if stride == 1:
             shortcut = input_data
         else:
-            print("entered here")
             shortcut = Conv2D(filters, 1, strides=(stride, stride),
                               padding='same')(input_data)
 
