@@ -1,4 +1,4 @@
-from trainFactory import trainFactory
+from trainings.trainFactory import trainFactory
 import sys
 import predict
 import argparse

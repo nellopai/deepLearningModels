@@ -1,5 +1,5 @@
-from trainClassification import TrainClassification
-from trainOD import TrainOD
+from trainings.trainClassification import TrainClassification
+from trainings.trainOD import TrainOD
 
 
 class trainFactory(object):

@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
-from trainAbstract import Train
+from trainings.trainAbstract import Train
 
 import os
 import tensorflow as tf
 from tensorflow.keras.optimizers import Adam
 import tensorflow_datasets as tfds
-from modelFactory import ModelFactory
+from networks.modelFactory import ModelFactory
 from networks.rcnn import RCNN
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 

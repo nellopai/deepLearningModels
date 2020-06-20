@@ -1,6 +1,6 @@
-from trainAbstract import Train
+from trainings.trainAbstract import Train
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from modelFactory import ModelFactory
+from networks.modelFactory import ModelFactory
 import tensorflow as tf
 import pathlib
 
@@ -49,7 +49,6 @@ class TrainClassification(Train):
         model = modelToUse.build(input_shape=(
             self.IMG_SIZE, self.IMG_SIZE, 1), num_classes=self.num_classes)
         print(model.summary())
-        print(model.count_params())
 
         if self.name_model != "googleLeNet":
             model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.0001),
