@@ -11,7 +11,7 @@ The **code/** directory contains:
     * DenseNet
 * for object detection
     * RCNN
-    
+
 The implementations are able to manage 2D images (so images in grayscale).
 In particular I got interested into the possibility to reduce the amount of
 parameters keeping the generalization power of the network.
@@ -66,6 +66,7 @@ data
 In order to train one of the provided networks please run the following command:
 
 python3 main.py -train OD
+
 where: 
 * -train tells to the main that the user wants to train a network and expects as an argument *OD*
 * only model currently available is RCNN
@@ -91,6 +92,9 @@ One should notice that ResNet18 has less parameter compared to VGG16 without the
 
 The focus for object detection models is not on the complexity and therefore the number of parameters
 is not reported.
+
+## Scientific papers
+
 In the following table one can find reference papers for each architecture:
 
 Name | Reference Papers
