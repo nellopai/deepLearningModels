@@ -11,6 +11,7 @@ The **code/** directory contains:
     * DenseNet
 * for object detection
     * RCNN
+    
 The implementations are able to manage 2D images (so images in grayscale).
 In particular I got interested into the possibility to reduce the amount of
 parameters keeping the generalization power of the network.
