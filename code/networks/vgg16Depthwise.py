@@ -62,7 +62,7 @@ class VGG16DwGlobalAverage:
         conv11 = BatchNormalization()(conv11)
         conv11 = ReLU()(conv11)
         conv12 = SeparableConv2D(filters=512, kernel_size=(3, 3),
-                                 padding="same", depthwise_regularizer=l2())(max_pool4)
+                                 padding="same", depthwise_regularizer=l2())(conv11)
         conv12 = BatchNormalization()(conv12)
         conv12 = ReLU()(conv12)
         conv13 = SeparableConv2D(filters=512, kernel_size=(3, 3),

@@ -41,7 +41,7 @@ class VGG16GlobalAverage:
         conv11 = Conv2D(filters=512, kernel_size=(3, 3),
                         padding="same", activation="relu")(max_pool4)
         conv12 = Conv2D(filters=512, kernel_size=(3, 3),
-                        padding="same", activation="relu")(max_pool4)
+                        padding="same", activation="relu")(conv11)
         conv13 = Conv2D(filters=512, kernel_size=(3, 3),
                         padding="same", activation="relu")(conv12)
         max_pool5 = MaxPool2D(pool_size=(2, 2), strides=(2, 2))(conv13)
